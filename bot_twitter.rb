@@ -30,23 +30,23 @@ client.search("to:justinbieber marry me", result_type: "recent").take(3).collect
   puts "#{tweet.user.screen_name}: #{tweet.text}"
 end
 
-journalistes = ["jcunniet","PaulLampon","Aziliz31"]
+journalistes = ["jcunniet", "PaulLampon", "Aziliz31", "ssoumier", "marionsouzeau", "gaellombart", "bendarag", "AurelieLebelle", "julienduffe", "thomaspoupeau", "LilyRossignol", "ClairGuedon", "stephanieauguy", "claw_prolongeau", "_JulieMenard", "LColcomb", "Zlauwereys", "MeLonguet", "DorotheeLN", "NolwennCosson", "ADaboval", "Remibaldy", "bderveaux", "amandechap", "ELODIESOULIE", "nbongarcon", "HeloAb", "Panamorama", "gregplou", "BenoitBerthe", "LauraBruneau89", "Anthony_Lieures", "Sharonwaj", "mcsonkin", "pverduzier", "emiliel3", "Julien_MARION", "SophiFay", "bdelombre", "annalecerf", "AdriaBudry", "DejNikolic"]
 
-#retweet le dernier tweet des journalistes ci-dessus
+#retweet le dernier tweet des journalistes ci-dessus toutes les 60 secondes pour eviter d'être ban
 journalistes.each do |id|
     begin
         client.retweet(client.user_timeline(id,:count => 1))
-            sleep(3)
+            sleep(60)
     rescue Twitter::Error => e
         next
     end
 end
 
-#tweet le message ci-dessous aux journalistes ci-dessus
+#tweet le message ci-dessous aux journalistes ci-dessus toutes les 60 secondes pour éviter d'être ban
 journalistes.each do |id|
     begin
         client.update("@#{id} Je suis élève à The Hacking Projet une formation gratuite au code et je viens de faire un bot Twitter après une semaine de formation seulement!")
-        sleep(3)
+        sleep(60)
     rescue Twitter::Error => e
         next
     end
