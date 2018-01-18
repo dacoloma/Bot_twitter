@@ -1,3 +1,5 @@
+Les clés sont masqués grâce à la gem dotenv. 
+
 Fonction de mon Bot Twitter :    (certaines fonctionnalités sont en commentaires pour éviter de surcharger la console)
 
 - Affiche dans la console tous les tweets qui mentionnent les termes "tea" et "coffee"     ==> en commentaire

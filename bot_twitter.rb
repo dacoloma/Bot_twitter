@@ -2,7 +2,7 @@ require 'twitter'
 require 'dotenv'
 require 'pry'
 
-Dotenv.load
+Dotenv.load 
 
 # quelques lignes qui enregistrent les clés d'APIs
 client = Twitter::REST::Client.new do |config|
