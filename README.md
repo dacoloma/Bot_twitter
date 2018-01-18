@@ -1,4 +1,5 @@
-Les clés sont masqués grâce à la gem dotenv. 
+Mon bot twitter : @MoussTHP18
+Les clés sont masqués grâce à la gem dotenv.
 
 Fonction de mon Bot Twitter :    (certaines fonctionnalités sont en commentaires pour éviter de surcharger la console)
 
